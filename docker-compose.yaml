@@ -1,0 +1,10 @@
+version: '2.12.2'
+
+services:
+
+  mongo: 
+    image: mongo
+    container_name: gpanel-mongo
+    restart: always
+    ports: 
+      - 27017:27017
