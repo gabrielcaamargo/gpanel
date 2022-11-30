@@ -1,14 +1,13 @@
 import { config } from 'dotenv';
 import express  from 'express';
 import mongoose from 'mongoose';
-import bcrypt from 'bcrypt';
-import jwt from 'jsonwebtoken';
 
 import { router } from './router';
 const app = express();
 
 app.use(express.json());
 app.use(router);
+config();
 
 mongoose.connect('mongodb://localhost:27017')
   .then(
